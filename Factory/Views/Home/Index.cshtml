@@ -1,0 +1,36 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Factory.Models;
+
+<h1>Dr.Sillystringz Factory</h1>
+<h2>Homepage</h2>
+
+<hr>
+
+<h4>Machines</h4>
+@if (Model["machines"].Length == 0)
+{
+  <p>We have no machines <strong>BIG PROBLEM</strong>!</p>
+}
+<ul>
+  @foreach (Machine machines in Model["machines"])
+  {
+    <li>@Html.ActionLink(@machines.MachineName, "Details", "Machines", new { id = @machines.MachineId})</li>
+  }
+</ul>
+
+<hr>
+
+<h4>Engineers</h4>
+@if (Model["engineers"].Length == 0)
+{
+  <p>There are no engineers hired <strong>Even Bigger Problem</strong>!</p>
+}
+<ul>
+  @foreach (Engineer engineers in Model["engineers"])
+  {
+    <li>@Html.ActionLink(@engineers.EngineerName, "Details", "Engineers", new { id = @engineers.EngineerId})</li>
+  }
+</ul>
