@@ -34,3 +34,6 @@
     <li>@Html.ActionLink(@engineers.EngineerName, "Details", "Engineers", new { id = @engineers.EngineerId})</li>
   }
 </ul>
+
+<p>@Html.ActionLink("Manage engineers", "Index", "Engineers")</p>
+<p>@Html.ActionLink("Manage machines", "Index", "Machines")</p>
