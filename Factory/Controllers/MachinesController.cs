@@ -63,7 +63,7 @@ namespace Factory.Controllers
         _db.EngineerMachines.Add(new EngineerMachine() { EngineerId = engineerId, MachineId = machine.MachineId });
         _db.SaveChanges();
       }
-      return RedirectToAction("Detail", new { id = machine.MachineId });
+      return RedirectToAction("Details", new { id = machine.MachineId });
     }
 
     public ActionResult Edit(int id)
@@ -96,7 +96,7 @@ namespace Factory.Controllers
     }
 
     [HttpPost]
-    public ActionResult DeleteJoin(int joinId)
+    public ActionResult DeleteJoin(int joinId, int id)
     {
       EngineerMachine joinEntry = _db.EngineerMachines.FirstOrDefault(e => e.EngineerMachineId == joinId);
       _db.EngineerMachines.Remove(joinEntry);
