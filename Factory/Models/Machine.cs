@@ -10,7 +10,6 @@ namespace Factory.Models
     public int MachineId { get; set; }
     public string MachineName { get; set; }
     public string MachineDetails { get; set; }
-    public DateTime InstallationDate { get; set; }
     public List<EngineerMachine> JoinEntities { get; }
   }
 }
