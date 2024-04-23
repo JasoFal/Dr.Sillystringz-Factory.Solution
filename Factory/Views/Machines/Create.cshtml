@@ -10,10 +10,10 @@
 {
   @Html.LabelFor(model => model.MachineName)
   @Html.TextBoxFor(model => model.MachineName)
-  <br />
+  <p>@Html.ValidationMessageFor(model => model.MachineName, "", new { @class = "text-danger", @style = "font-weight: 400;" })</p>
   @Html.LabelFor(model => model.MachineDetails)
   @Html.TextBoxFor(model => model.MachineDetails)
-  <br />
+  <p>@Html.ValidationMessageFor(model => model.MachineDetails, "", new { @class = "text-danger", @style = "font-weight: 400;" })</p>
 
   <input type="submit" value="Add new machine"/>
 }
