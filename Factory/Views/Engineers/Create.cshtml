@@ -10,9 +10,10 @@
 {
   @Html.LabelFor(model => model.EngineerName)
   @Html.TextBoxFor(model => model.EngineerName) 
-  <br />
+  <p>@Html.ValidationMessageFor(model => model.EngineerName, "", new { @class = "text-danger", @style = "font-weight: 400;" })</p>
   @Html.LabelFor(model => model.JobTitle)
-  @Html.TextBoxFor(model => model.JobTitle) 
+  @Html.TextBoxFor(model => model.JobTitle)
+  <p>@Html.ValidationMessageFor(model => model.JobTitle, "", new { @class = "text-danger", @style = "font-weight: 400;" })</p>
 
   <input type="submit" value="Add new engineer">
 }
