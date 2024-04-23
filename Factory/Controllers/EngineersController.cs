@@ -86,15 +86,6 @@ namespace Factory.Controllers
       return RedirectToAction("Details", new { id = engineer.EngineerId });
     }
 
-    [HttpPost]
-    public ActionResult DeleteJoin(int joinId)
-    {
-      EngineerMachine joinEntry = _db.EngineerMachines.FirstOrDefault(e => e.EngineerMachineId == joinId);
-      _db.EngineerMachines.Remove(joinEntry);
-      _db.SaveChanges();
-      return RedirectToAction("Index");
-    }
-
     public ActionResult Delete(int id)
     {
       Engineer thisEngineer = _db.Engineers.FirstOrDefault(e => e.EngineerId == id);
@@ -106,6 +97,15 @@ namespace Factory.Controllers
     {
       Engineer thisEngineer = _db.Engineers.FirstOrDefault(e => e.EngineerId == id);
       _db.Engineers.Remove(thisEngineer);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    [HttpPost]
+    public ActionResult DeleteJoin(int joinId)
+    {
+      EngineerMachine joinEntry = _db.EngineerMachines.FirstOrDefault(e => e.EngineerMachineId == joinId);
+      _db.EngineerMachines.Remove(joinEntry);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
