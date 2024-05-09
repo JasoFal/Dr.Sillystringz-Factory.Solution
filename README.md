@@ -17,7 +17,7 @@ _Add installed machines and hired engineers to database and show which engineers
 ## Setup/Installation Requirements
 
 * _Cloning project_
-1. _Open Git Bash/Open terminal of your choice navigate to directory of your choice and run this command `cd clone https://github.com/JasoFal/Dr.Sillystringz-Factory.Solution.git`_
+1. _Open Git Bash/Open terminal of your choice navigate to directory of your choice and run this command `git clone https://github.com/JasoFal/Dr.Sillystringz-Factory.Solution.git`_
 2. _Once you have cloned the project, navigate to project folder using Git Bash/ a terminal of your choice using the cd command and run `code .` within project folder. Or you can use file explorer to open the project manually._
 * _Navigating to project directory and restoring dependencies_
 3. _Navigate to the project directory, in this case **Factory** using command `cd Factory` in terminal._
